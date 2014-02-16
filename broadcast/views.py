@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from twilio.rest import TwilioRestClient
-from pen.local_settings import AC_SSID, AUTH_TOCKEN
+from pen.local_settings import AC_SSID, AUTH_TOCKEN, FROM_NUMBER
 from models  import Teacher
 from forms import MessageForm
 
@@ -15,7 +15,7 @@ def msg_send(number, msg):
 
     message = client.messages.create(body=msg,
     to= number,
-    from_="+14844890949")
+    from_=FROM_NUMBER)
     print message.sid
 
 def broadcast_message(request):
