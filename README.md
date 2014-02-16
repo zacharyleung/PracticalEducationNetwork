@@ -1,4 +1,4 @@
 PracticalEducationNetwork
 =========================
 
-ID Hack 2014
+PEN mobile platform ID Hack 2014
