@@ -1,11 +1,12 @@
 from django.conf.urls import patterns, include, url
+from broadcast.views import send_messages
 
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'pen.views.home', name='home'),
+    url(r'^broadcast$', send_messages, name='home'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
