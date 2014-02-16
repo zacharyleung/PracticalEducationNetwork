@@ -8,6 +8,5 @@ class TeacherAdmin(admin.ModelAdmin):
 admin.site.register(Teacher, TeacherAdmin)
 
 class MessageAdmin(admin.ModelAdmin):
-    pass
-    #list_display = ('name', 'number')
+    list_display = ('sender', 'message')
 admin.site.register(Message, MessageAdmin)
